@@ -24,6 +24,7 @@ public class SeasonContextListener implements ServletContextListener {
             
             Milktea monthlyMilktea = new Milktea(monthlyFlavorPrice, monthlyFlavorName, monthlyFlavorDescription, monthlyFlavorImagePath);
             sc.setAttribute("monthlyMilktea", monthlyMilktea);
+            sc.setAttribute("seasonTheme", "winterTheme");
         }
     }
 

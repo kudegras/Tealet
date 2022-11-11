@@ -4,15 +4,15 @@
     Author     : maxim
 --%>
 
-<%@page import="java.time.Month"%>
-<%@page import="java.time.LocalDate"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-    if (LocalDate.now().getMonth() == Month.DECEMBER) {
-            response.sendRedirect("/Tealet/indexXmas.jsp");
+    String seasonTheme = (String) getServletContext().getAttribute("seasonTheme");
+    if (seasonTheme.equals("winterSeason")) {
+        response.sendRedirect("/Tealet/indexXmas.jsp");
     }
 %>
+
 <!DOCTYPE html>
 <html>
     <head>

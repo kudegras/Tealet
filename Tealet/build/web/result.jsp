@@ -70,7 +70,10 @@
         <footer>
             <h4 class="orange">Contact us!</h4>
             <h5>email: <% out.print(getServletContext().getInitParameter("emailAddress")); %></h5>
-            <h5>hotline: <% out.print(getServletContext().getInitParameter("hotlineNumber")); %></h5
+            <h5>hotline: <% out.print(getServletContext().getInitParameter("hotlineNumber")); %></h5>
+            <a href="https://github.com/kudegras/Tealet" target="_blank">
+            <img src="./images/github.svg" alt="github icon" width="30px" height="30px">
+            </a>
         </footer>
     </body>
 </html>

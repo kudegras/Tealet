@@ -24,6 +24,10 @@ body {
     background-color: #FAFFD2;
 }
 
+.links, .name {
+    font-size: 1.3rem;
+}
+
 header {
     padding: 16px 72px;
     background: rgb(225, 249, 255);
@@ -130,4 +134,15 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+footer img {
+    transition: width 0.5s, height 0.5s, 0.5s;
+}
+
+footer img:hover {
+    width: 32px;
+    height: 32px;
+    transform: rotate(360deg);
+    opacity: 0.7;
 }

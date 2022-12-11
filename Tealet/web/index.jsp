@@ -8,7 +8,7 @@
 
 <%
     String seasonTheme = (String) getServletContext().getAttribute("seasonTheme");
-    if (seasonTheme.equals("winterSeason")) {
+    if (seasonTheme != null && seasonTheme.equals("winterTheme")) {
         response.sendRedirect("/Tealet/indexXmas.jsp");
     }
 %>
@@ -39,6 +39,7 @@
             <img src="images/TealetLogo.png" alt="TealetLogo">
             <h3 class="promo">Free metal straw for every order of Wintermelon tea</h3>
             <h3>Stay tuned for our new Theme and Flavor in December!</h3>
+            <p>(needs a server restart to work)</p>
         </div>
         
         <footer>
@@ -46,6 +47,9 @@
             <h4 class="orange">Contact us!</h4>
             <h5>email: <% out.print(getServletContext().getInitParameter("emailAddress")); %></h5>
             <h5>hotline: <% out.print(getServletContext().getInitParameter("hotlineNumber")); %></h5>
+            <a href="https://github.com/kudegras/Tealet" target="_blank">
+            <img src="./images/github.svg" alt="github icon" width="30px" height="30px">
+            </a>
         </footer>
     </body>
 </html>
